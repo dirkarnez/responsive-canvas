@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .vb-canvas {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module">
+        import { createCanvas } from 'https://cdn.skypack.dev/vb-canvas@0.1.4';
+
+        const { ctx } = createCanvas({
+            target: document.body,
+            viewBox: [0, 0, 100, 100],
+            // change to fill to fill canvas (xMidYMid slice style!)
+            // scaleMode: 'fill'
+        });
+
+        let angle = 0;
+
+        (function loop() {
+            ctx.fillStyle = 'papayawhip';
+            ctx.fillRect(0, 0, 100, 100);
+
+            ctx.save();
+
+            ctx.translate(50, 50);
+            ctx.rotate(angle);
+            ctx.fillStyle = 'tomato';
+            ctx.fillRect(-10, -10, 20, 20);
+
+            ctx.restore();
+
+            angle += 0.025;
+
+            requestAnimationFrame(loop);
+        })();
+
+
+    </script>
+</body>
+
+</html>
