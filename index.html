@@ -1,0 +1,96 @@
+<!-- Licensed under a BSD license. See license.html for license -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Three.js - Responsive HD-DPI</title>
+    <style>
+    html, body {
+        margin: 0;
+        height: 100%;
+    }
+    #c {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    </style>
+ </head>
+  <body>
+    <canvas id="c"></canvas>
+  </body>
+  
+<script type="module">
+
+
+function main() {
+    const canvas = document.querySelector( '#c' )
+
+function draw() {
+    const ctx = canvas.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 10, 50);
+}
+
+	window.onresize = resizeCanvas;
+	resizeCanvas();
+
+function resizeCanvas() {
+  // When zoomed out to less than 100%, for some very strange reason,
+  // some browsers report devicePixelRatio as less than 1
+  // and only part of the canvas is cleared then.
+  const ratio = Math.max(window.devicePixelRatio || 1, 1);
+
+  // This part causes the canvas to be cleared
+  canvas.width = canvas.offsetWidth * ratio;
+  canvas.height = canvas.offsetHeight * ratio;
+  canvas.getContext("2d").scale(ratio, ratio);
+
+  // This library does not listen for canvas changes, so after the canvas is automatically
+  // cleared by the browser, SignaturePad#isEmpty might still return false, even though the
+  // canvas looks empty, because the internal data of this library wasn't cleared. To make sure
+  // that the state of this library is consistent with visual state of the canvas, you
+  // have to clear it manually.
+  //signaturePad.clear();
+
+  // If you want to keep the drawing on resize instead of clearing it you can reset the data.
+  // signaturePad.fromData(signaturePad.toData());
+draw();
+}
+
+    function resizeRendererToDisplaySize() {
+		const pixelRatio = window.devicePixelRatio;
+
+		const width = Math.floor( canvas.clientWidth * pixelRatio );
+		const height = Math.floor( canvas.clientHeight * pixelRatio );
+		const needResize = canvas.width !== width || canvas.height !== height;
+		if (needResize) {
+			resizeCanvas();
+			// renderer.setSize( width, height, false );
+			console.log("need resize");
+		}
+
+		return needResize;
+	}
+    
+    function render(time) {
+		console.log(time);
+		if (resizeRendererToDisplaySize()) {
+			const aspect = canvas.clientWidth / canvas.clientHeight;
+			console.log(aspect);
+		}
+
+		requestAnimationFrame( render );
+
+	}
+
+	requestAnimationFrame( render );
+}
+
+
+main();
+</script>
+
+</html>
+
