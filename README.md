@@ -8,3 +8,4 @@ FROM [HTML5 canvas... responsive! - DEV Community](https://dev.to/georgedoescode
 - [szimek/signature_pad: HTML5 canvas based smooth signature drawing](https://github.com/szimek/signature_pad)
   - https://szimek.github.io/signature_pad/js/app.js
 - [molstar/src/mol-canvas3d/util.ts at master · molstar/molstar](https://github.com/molstar/molstar/blob/master/src/mol-canvas3d/util.ts)
+- [autoscale-canvas/index.js at master · component/autoscale-canvas](https://github.com/component/autoscale-canvas/blob/master/index.js)
