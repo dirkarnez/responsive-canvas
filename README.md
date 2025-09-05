@@ -2,6 +2,9 @@
 ==================================================================
 FROM [HTML5 canvas... responsive! - DEV Community](https://dev.to/georgedoescode/html5-canvas-responsive-2keh)
 
+### TODOs
+- [ ] make it a library
+
 ### Based on
 - [Three.js - Responsive HD-DPI](https://threejs.org/manual/examples/responsive-hd-dpi.html)
   - [Responsive Design - three.js manual](https://threejs.org/manual/#en/responsive)
