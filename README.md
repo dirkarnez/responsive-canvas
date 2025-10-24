@@ -2,6 +2,20 @@
 ==================================================================
 FROM [HTML5 canvas... responsive! - DEV Community](https://dev.to/georgedoescode/html5-canvas-responsive-2keh)
 
+### Notes
+- DO NOT hand-write responsive-canvas
+  - Use [dirkarnez/pixijs-webgl-playground](https://github.com/dirkarnez/pixijs-webgl-playground) where pixijs already provides responsive and `window.devicePixelRatio`-supporting canvas, and we can use yoga-layout inside pixijs
+    - ```javascript
+      await app.init({
+        antialias: true, // Enable antialiasing
+        resolution: window.devicePixelRatio, // Screen resolution
+        preference: 'webgl', // 'webgl' or 'webgpu'
+        background: '#1099bb', 
+        resizeTo: window,
+        autoResize: true,
+        autoDensity: true
+      });
+      ```
 ### TODOs
 - [ ] make it a library
 
