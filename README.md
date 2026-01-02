@@ -29,3 +29,4 @@ FROM [HTML5 canvas... responsive! - DEV Community](https://dev.to/georgedoescode
 - [hughsk/canvas-autoscale: A variant of canvas-fit that handles some extra magic for you: adjusting the scale of the canvas to maintain smooth framerates](https://github.com/hughsk/canvas-autoscale)
 - [webgpu-samples/sample/resizeCanvas/main.ts at main · webgpu/webgpu-samples](https://github.com/webgpu/webgpu-samples/blob/main/sample/resizeCanvas/main.ts)
 - [tldraw/tldraw: very good whiteboard SDK / infinite canvas SDK](https://github.com/tldraw/tldraw)
+- [Responsive Canvas Stage Demo | Konva - JavaScript Canvas 2d Library](https://konvajs.org/docs/sandbox/Responsive_Canvas.html)
