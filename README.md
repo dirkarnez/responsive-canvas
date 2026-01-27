@@ -30,3 +30,4 @@ FROM [HTML5 canvas... responsive! - DEV Community](https://dev.to/georgedoescode
 - [webgpu-samples/sample/resizeCanvas/main.ts at main · webgpu/webgpu-samples](https://github.com/webgpu/webgpu-samples/blob/main/sample/resizeCanvas/main.ts)
 - [tldraw/tldraw: very good whiteboard SDK / infinite canvas SDK](https://github.com/tldraw/tldraw)
 - [Responsive Canvas Stage Demo | Konva - JavaScript Canvas 2d Library](https://konvajs.org/docs/sandbox/Responsive_Canvas.html)
+- https://github.com/theacodes/kicanvas/blob/main/src/graphics/canvas2d.ts
