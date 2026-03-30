@@ -38,3 +38,5 @@ FROM [HTML5 canvas... responsive! - DEV Community](https://dev.to/georgedoescode
 - https://github.com/theacodes/kicanvas/blob/main/src/graphics/canvas2d.ts
 - [surfer-project / surfer · GitLab](https://gitlab.com/surfer-project/surfer)
   - App UI
+- https://github.com/xtermjs/xterm.js/blob/ad730f2d541356874449dba66fe40f9c251778db/src/browser/services/CoreBrowserService.ts#L75
+    - dpr
